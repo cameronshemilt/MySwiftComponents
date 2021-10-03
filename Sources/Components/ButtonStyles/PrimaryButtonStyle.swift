@@ -5,7 +5,7 @@ public struct PrimaryButtonStyle: ButtonStyle {
     private var foregroundColor: Color = .white
     private var scheme: ColorScheme = .light
     
-    init(color: Color = .accentColor,
+    public init(color: Color = .accentColor,
          foregroundColor: Color = .white,
          scheme: ColorScheme = .light
     ) {

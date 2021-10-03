@@ -5,7 +5,7 @@ public struct PrimaryCapsuleButtonStyle: ButtonStyle {
     private var foregroundColor: Color
     private var scheme: ColorScheme
     
-    init(color: Color = .accentColor,
+    public init(color: Color = .accentColor,
          foregroundColor: Color = .white,
          scheme: ColorScheme = .light
     ) {
