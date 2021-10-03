@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct FeatureIcon: View {
+public struct FeatureIcon: View {
     @Environment(\.colorScheme) var scheme
     
     var icon: Image
@@ -10,7 +10,7 @@ struct FeatureIcon: View {
     var foregroundColor: Color
     var weight: Font.Weight = .medium
     
-    init(_ icon: String, size: CGFloat = 40, radius: CGFloat = 5, color: Color = .accentColor, foregroundColor: Color = .white) {
+    public init(_ icon: String, size: CGFloat = 40, radius: CGFloat = 5, color: Color = .accentColor, foregroundColor: Color = .white) {
         self.icon = Image(systemName: icon)
         self.size = size
         self.radius = radius
@@ -18,7 +18,7 @@ struct FeatureIcon: View {
         self.foregroundColor = foregroundColor
     }
     
-    init(customIcon: String, size: CGFloat = 40, radius: CGFloat = 5, color: Color = .accentColor, foregroundColor: Color = .white) {
+    public init(customIcon: String, size: CGFloat = 40, radius: CGFloat = 5, color: Color = .accentColor, foregroundColor: Color = .white) {
         self.icon = Image(customIcon)
         self.size = size
         self.radius = radius
@@ -26,7 +26,7 @@ struct FeatureIcon: View {
         self.foregroundColor = foregroundColor
     }
     
-    var body: some View {
+    public var body: some View {
         ZStack (alignment: .center) {
             Rectangle()
                 .foregroundColor(color.opacity(scheme == .dark ? 0.15 : 1))
@@ -38,7 +38,7 @@ struct FeatureIcon: View {
         .cornerRadius(radius)
     }
     
-    func weight(_ weight: Font.Weight) -> some View {
+    public func weight(_ weight: Font.Weight) -> some View {
         var copy = self
         copy.weight = weight
         return copy
