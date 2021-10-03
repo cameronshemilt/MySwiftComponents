@@ -1,9 +1,18 @@
 import SwiftUI
 
 public struct PrimaryCapsuleButtonStyle: ButtonStyle {
-    var color: Color = .accentColor
-    var foregroundColor: Color = .white
-    var scheme: ColorScheme = .light
+    private var color: Color
+    private var foregroundColor: Color
+    private var scheme: ColorScheme
+    
+    init(color: Color = .accentColor,
+         foregroundColor: Color = .white,
+         scheme: ColorScheme = .light
+    ) {
+        self.color = color
+        self.foregroundColor = foregroundColor
+        self.scheme = scheme
+    }
     
     public func makeBody(configuration: Configuration) -> some View {
         configuration.label
